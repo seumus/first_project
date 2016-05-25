@@ -1,0 +1,39 @@
+<h1><a href="/">Go back home.</a><br>
+<h2>Edit a Nation:</h2>
+
+
+
+<form class="" action="/nations/<%=@nation.id%>" method="post" enctype="multipart/form-data">
+  <input type="hidden" name="_method" value="put">
+  <label for="title">Nations name:</label>
+  <input type="text" name="title"><br>
+
+  <label for="shorthand">Nation code:</label>
+  <input type="text" name="shorthand" value=""><br>
+
+  <label for="total_gold"></label>
+  <select class="" name="total_gold">
+    <option value="0">0</option>
+  </select>
+
+  <label for="total_silver"></label>
+  <select class="" name="total_silver">
+    <option value="0">0</option>
+  </select>
+
+  <label for="total_bronze"></label>
+  <select class="" name="total_bronze">
+    <option value="0">0</option>
+  </select>
+
+
+
+  <input type='submit' value="Edit Nation!">
+  </form>
+
+  <form action="/nations/<%= @nation.id %>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value="Delete Nation">
+
+
+  </form>

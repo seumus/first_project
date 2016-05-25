@@ -1,0 +1,101 @@
+body{
+  background-color: white;
+}
+
+header{
+  background-color: white;
+  background-image: url('../images/flags/gifs/302.gif');
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  text-decoration: none;
+}
+
+h1{
+  margin: auto;
+  padding: 50px 0;
+  font-family: Orbitron;
+  color: black;
+  text-shadow: 2px 2px grey;
+  text-indent: 20px;
+  /*display: block;*/
+  text-align: center;
+}
+
+a{
+  text-decoration: none;
+  color: green;
+  font-weight: bold;
+}
+
+a:hover{
+  color: red;
+}
+
+nav{
+  display: inline-block;
+  text-align: right;
+  text-decoration: none;
+}
+
+li{
+  display: inline-block;
+}
+
+
+table{
+  border-style: solid;
+  border-radius: 5px;
+  padding: 5px;
+  text-align: center;
+}
+
+table td{
+  border-style: ridge;
+  text-align: center;
+  background-position: center;
+  font-weight: bolder;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+table th{
+  border-style: solid;
+  border-radius: 5px;
+}
+
+.athletes{
+  border-style: solid;
+  border-color: grey;
+  border-style: groove;
+  border-radius: 5px;
+  background-color: rgba(255,255,76,0.5);
+  padding: 5px;
+}
+
+.table_hover:hover{
+ background-color: #FFE487 ;
+}
+
+.container{
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+button{
+  padding: 5px;
+  background-color: lightblue;
+}
+
+.box{
+  background-color: yellow;
+}
+
+.home{
+  width: 50%;
+  margin: 0 auto;
+}
+/*.table_hover{
+ background-color: #DDE487 ;
+}*/

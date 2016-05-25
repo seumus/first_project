@@ -1,0 +1,21 @@
+
+<button type="button" name="button"><a href="/events/new">Add new event</a><br></button><br>
+<br>
+<table class="home">
+  <tr>
+    <th scope="col">Event</th>
+    <th scope="col">Gold Winner</th>
+    <th scope="col">Silver Winner</th>
+    <th scope="col">Bronze Winner</th>
+  </tr>
+
+  <% @events.each do |event| %>
+    <tr class= "table_hover">
+      <td scope="row"><%=event.type%></td>
+      <%=t = Nation.find(event.gold_winner_id)%>
+      <td scope="row"><%=Athlete.find(event.gold_winner_id).name%> <img src="url(../images/flags/Flag_Scotland.png" alt="" /></td>
+      <td scope="row"><%=Athlete.find(event.silver_winner_id).name%></td>
+      <td scope="row"><%=Athlete.find(event.bronze_winner_id).name%></td>
+    </tr>
+    <% end %>
+</table>

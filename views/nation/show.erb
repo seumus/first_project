@@ -1,0 +1,27 @@
+
+<img src="../<%=@nation.flag_gif%>" alt="" /><br>
+<%= "#{@nation.title}"%>
+
+<br>
+
+<table class="home">
+  <tr>
+    <th scope="col">Athlete</th>
+    <th scope="col">Gold Medals</th>
+    <th scope="col">Silver Medals</th>
+    <th scope="col">Bronze Medals</th>
+    <th scope="col">Total Points</th>
+  </tr>
+
+  <%@athletes.each do |athlete| %>
+    <%if athlete.nation_id == @nation.id %>
+    <tr class= "table_hover">
+      <td scope="row"><%=athlete.name %></td>
+      <td scope="row">-</td>
+      <td scope="row">-</td>
+      <td scope="row">-</td>
+      <td scope="row">-</td>
+    </tr>
+    <%end%>
+  <%end%>
+</table>

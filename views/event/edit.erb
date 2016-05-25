@@ -1,0 +1,36 @@
+<h1><a href="/">Go back home.</a><br>
+<h2>Edit a Event:</h2>
+
+
+
+<form class="" action="/events/<%=@event.id%>" method="post" enctype="multipart/form-data">
+  <input type="hidden" name="_method" value="put">
+  <label for="type">Event:</label>
+  <input type="text" name="type"><br>
+
+  <label for="gold_winner_id"></label>
+  <select class="" name="gold_winner_id">
+    <option value="0">0</option>
+  </select>
+
+  <label for="silver_winner_id"></label>
+  <select class="" name="silver_winner_id">
+    <option value="0">0</option>
+  </select>
+
+  <label for="bronze_winner_id"></label>
+  <select class="" name="bronze_winner_id">
+    <option value="0">0</option>
+  </select>
+
+
+
+  <input type='submit' value="Edit Event!">
+  </form>
+
+  <form action="/events/<%= @event.id %>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value="Delete Event">
+
+
+  </form>

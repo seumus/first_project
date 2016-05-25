@@ -1,0 +1,16 @@
+<br>
+<button type="button" name="button"><a href="/athletes/new">Add new athlete</a></button><br>
+<br>
+
+<% @athletes.each do |athlete| %>
+  <div class="athletes">
+    <img src="../<%=athlete.picture %>" alt="" height="100" width="75" style="border-style: groove;"/><br>
+  <%= athlete.name %>  from <%= athlete.nation%> <br>
+  <a href="http://twitter.com/intent/tweet?screen_name=seumusblair">@seumusblair</a>
+  <a class="twitter-share-button"
+  href="https://twitter.com/intent/tweet">
+Tweet</a><br>
+  <button type="button" name="Edit"><a href="./athletes/<%=athlete.id%>/edit">Edit Athlete</a></button>
+  </div>
+  <br>
+<% end %>

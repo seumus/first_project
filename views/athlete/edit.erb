@@ -1,0 +1,32 @@
+<h1><a href="/">Go back home.</a><br>
+<h2>Edit a Athlete:</h2>
+
+<form class="" action="/athletes/<%= @athlete.id%> " method="post" enctype="multipart/form-data">
+  <input type="hidden" name="_method" value="put">
+  <label for="name">Name:</label>
+  <input type="text" name="name"value= "<%= @athlete.name%>"><br>
+
+  <br>
+  <br>
+
+    <label for="nation_id">Nation:</label>
+    <select name="nation_id">
+      <% @nations.each do |nation|%>
+        <option value="<%=nation.id%>"<%= "selected" if nation.id == @athlete.nation_id %>><%=nation.title%></option>
+      <%end%>
+    </select>
+    <img src="../../<%=@athlete.picture %>" alt="" height="100" width="75" style="border-style: groove;"/>
+    <input type="file" name="picture"><br>
+    <br>
+
+
+    <input type='submit' value="Make changes">
+
+</form>
+
+<form action="/athletes/<%= @athlete.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete Athlete">
+
+
+</form>

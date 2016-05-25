@@ -1,0 +1,21 @@
+<br><br>
+<form class="" action="/athletes" method="post" enctype="multipart/form-data">
+  <label for="name">Name:</label>
+  <input type="text" name="name"><br>
+<br>
+<br>
+
+  <label for="nation_id">Nation:</label>
+  <select name="nation_id">
+    <% @nations.each do |nation|%>
+      <option value="<%=nation.id%>"><%=nation.title%></option>
+    <%end%>
+  </select>
+<br>
+  <label for="file">Add a photo:</label>
+  <input type="file" name="picture"><br>
+  <br>
+
+
+  <input type='submit' value="Add Athlete!">
+</form>

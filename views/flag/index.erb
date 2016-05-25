@@ -1,0 +1,6 @@
+<a href="/nations/new">Add new nation</a><br>
+
+<% @nations.each do |nation| %>
+  <img src="../<%=nation.flag_still%>" alt="" />
+  <%= nation.title %><br>
+<% end %>

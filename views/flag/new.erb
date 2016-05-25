@@ -1,0 +1,21 @@
+
+<form class="" action="/flags" method="post" enctype="multipart/form-data">
+  <label for="flag_name">Flag name:</label>
+  <input type="text" name="flag_name"><br><br>
+
+
+  <label for="nation_id">Nation:</label>
+  <select name="nation_id">
+    <% @nations.each do |nation|%>
+      <option value="<%=nation.id%>"><%=nation.title%></option>
+    <%end%>
+  </select><br><br>
+
+  <label for="file">Upload gif:</label>
+  <input type="file" name="gif"><br>
+  <label for="file">Upload still:</label>
+  <input type="file" name="still"><br>
+
+
+  <input type='submit' value="Add flag!">
+  </form>

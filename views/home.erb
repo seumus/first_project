@@ -1,0 +1,26 @@
+<div class="home">
+
+
+<table >
+  <tr>
+    <th scope="col">Country</th>
+    <th scope="col">Gold Medals</th>
+    <th scope="col">Silver Medals</th>
+    <th scope="col">Bronze Medals</th>
+    <th scope="col">Total Points</th>
+  </tr>
+
+
+  <% @nations.each do |nation| %>
+
+    <tr class= "table_hover">
+      <td scope="row" style="background-image: url('../<%=nation.flag_still%>'); background-size: 93px 60px; background-color: lightblue;"><a href="/nations/<%=nation.id%>"><%=nation.title%></a></td>
+      <td scope="row"><%=nation.total_gold%></td>
+      <td scope="row"><%=nation.total_silver%></td>
+      <td scope="row"><%=nation.total_bronze%></td>
+      <td scope="row"><%=nation.total_points()%></td>
+    </tr>
+
+  <%end%>
+</table>
+</div>

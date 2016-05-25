@@ -1,0 +1,28 @@
+
+<form class="" action="/events" method="post" enctype="multipart/form-data">
+  <label for="type">Event name:</label>
+  <input type="text" name="type"><br>
+
+  <label for="gold_winner_id">Gold winner:</label>
+  <select class="" name="gold_winner_id">
+    <%@athletes.each do |athlete|%>
+    <option value="<%=athlete.id%>"><%=athlete.name%></option>
+    <%end%>
+  </select>
+
+  <label for="silver_winner_id"></label>
+  <select class="" name="silver_winner_id">
+    <%@athletes.each do |athlete|%>
+    <option value="<%=athlete.id%>"><%=athlete.name%></option>
+    <%end%>
+  </select>
+
+  <label for="bronze_winner_id"></label>
+  <select class="" name="bronze_winner_id">
+    <%@athletes.each do |athlete|%>
+    <option value="<%=athlete.id%>"><%=athlete.name%></option>
+    <%end%>
+  </select>
+
+  <input type='submit' value="Add Event!">
+  </form>
